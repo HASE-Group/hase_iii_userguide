@@ -1,1 +1,1 @@
-<a href="https://github.com/HASE-Group/Documents/intro.md" target="content">Introduction</a>
+https://github.com/HASE-Group/Documents/intro.md
