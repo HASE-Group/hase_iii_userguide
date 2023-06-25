@@ -1,6 +1,6 @@
 ## The User Interface
 
-The HASE III window contains a the Menu Bar at the top, a Project View panel, aProject Inspector panel, an Output panel (the HASE Console) and a status line at the bottom.
+The HASE III window contains a Menu Bar at the top, a Project View panel, a Project Inspector panel, an Output panel (the HASE Console) and a status line at the bottom.
 
 ### Menu Bar
 
