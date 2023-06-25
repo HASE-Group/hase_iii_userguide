@@ -8,5 +8,4 @@ The first production version of HASE was developed as part of the ALAMO projects
 
 In addition to supporting research projects, HASE has been used to support numerous undergraduate and taught MSc student projects and several models have beenused for virtual laboratory practical exercises.
 
-[<- Userguide](<https://github.com/HASE-Group/Documents/blob/main/Userguide.md>\
-)
+[<- Userguide](<https://github.com/HASE-Group/Documents/blob/main/Userguide.md>)
