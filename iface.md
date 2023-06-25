@@ -12,3 +12,4 @@ The Menu Bar has four pull-down menus (File, View, Project and Tools) and indivi
 |:-------|:-----------|:-------------------|
 |<img  src="images/proj-butt.gif" alt="project button">|Open Project|Pops up a project selector box|
 
+[<- Userguide](<https://github.com/HASE-Group/Documents/blob/main/Userguide.md>)
