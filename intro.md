@@ -1,4 +1,4 @@
-## Introduction to HASE
+[^](<https://github.com/HASE-Group/Documents/blob/main/menu.md>) ## Introduction to HASE
 
 HASE is a Hierarchical computer Architecture design and Simulation
 Environment which allows for the rapid development and exploration of
@@ -11,3 +11,4 @@ architecture the dynamic behaviour of systems is frequently of
 interest.  Thus the user interface to HASE is via a graphical design
 window and HASE allows users to view the results of simulation runs
 though animation of the design window.
+[^](<https://github.com/HASE-Group/Documents/blob/main/menu.md>)
