@@ -1,4 +1,4 @@
-##HASE History
+## HASE History
 
 The ideas for HASE grew from a simulator built for an MC88000 system in 1989, written in occam and run on a Meiko Computing Surface at the Edinburgh Parallel Computing Centre.  However, HASE itself has been developed using object oriented simulation languages, the first prototype using DEMOS, the second Sim++ and the current version Hase++.
 
