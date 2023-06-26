@@ -24,3 +24,5 @@ During a simulation run, HASE writes an event sequence into an event Trace File 
 ### Animation
 
 The Animator allows the user to check that the model produces correct results.  Activity in the simulation model is visualised in a variety of ways, *e.g.* through moving icons showing data packets passing between components in the design window, by changes to a component's icon to reflect its current state and by the changing contents of registers and memories in the Project Inspector panel.
+
+[<- Userguide](<https://github.com/HASE-Group/Documents/blob/main/Userguide.md>)
