@@ -19,10 +19,8 @@ The Menu Bar has four pull-down menus (File, View, Project and Tools) and indivi
 |<img  src="images/clean-build-butt.gif" alt="clean-build button">|Clean & Build Project|Deletes created files and rebuilds the project simulation executable|
 |<img  src="images/props-butt.gif" alt="properties button">|Project Properties|Opens a project properties display window|
 |<img  src="images/edit-param-butt.gif" alt="edit parameters button">|Edit Parameters|Re-enables parameter editing after a trace file has been loaded|
-|<img  src="images/write-param-butt.gif" alt="write parameters button">|Write Parameters|Updates the <i>project</i>.params file with changes made in the GUI to the values of parameters declared in the \
-project definition files|
-|<img  src="images/deleteparams.png" alt="delete parameters button">|Delete Parameters|Deletes the project's .params file, resetting parameter values back to the default value defined in the project's \
-EDL file|
+|<img  src="images/write-param-butt.gif" alt="write parameters button">|Write Parameters|Updates the <i>project</i>.params file with changes made in the GUI to the values of parameters declared in the project definition files|
+|<img  src="images/deleteparams.png" alt="delete parameters button">|Delete Parameters|Deletes the project's .params file, resetting parameter values back to the default value defined in the project's EDL file|
 |<img  src="images/run-butt.gif" alt="run button">|Run Simulation|Runs the simulation|
 |<img  src="images/trace-butt.gif" alt="trace button">|Load Trace File|Pops up a trace file selector box|
 
