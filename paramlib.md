@@ -38,7 +38,7 @@ The STRUCT construct allows the creation of data structures, similar to the stru
 - **reference\_parameter:** - See the Reference Parameters section.  
 **Example:**
 <tt>
-STRUCT ( Data\_Packet, [ RINT (Packet\_No, 0) , RINT (Packet\_Data, 0) ] )
+STRUCT ( Data_Packet, [ RINT (Packet_No, 0) , RINT (Packet_Data, 0) ] )
 </tt>
 
 <HR>
@@ -102,7 +102,7 @@ register of type <tt>t\_simple\_instrn\_set</tt>.
  switch (IR.function)  
   {
      case ADD:	// ADD Rx Ry Rz: Rx = Ry + Rz 
-     dest\_op = src1\_op + src2\_op; 
+     dest_op = src1_op + src2_op; 
      break; 
     *etc.* 
   }
