@@ -100,7 +100,7 @@ register of type <tt>t\_simple\_instrn\_set</tt>.
 6. Individual instructions within the <tt>ALU</tt> set can be decoded using a <tt>switch</tt> construct:
 <pre>
  switch (IR.function)  
-  {\_
+  {
      case ADD:	// ADD Rx Ry Rz: Rx = Ry + Rz 
      dest\_op = src1\_op + src2\_op; 
      break; 
@@ -109,7 +109,7 @@ register of type <tt>t\_simple\_instrn\_set</tt>.
 </pre>
 *OR* by using the construct:
 <pre>
-if (IR.function == t\_simple\_instrn\_set::JUMP) 
+if (IR.function == t_simple_instrn_set::JUMP) 
  {  
  }  
 </pre>
