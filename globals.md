@@ -7,7 +7,7 @@ The **GLOBALS** section of the project definition file contains definitions of [
 
 #### HASE++: Reporting global parameter changes
 
-In the same way that changes of state are only recorded in the tracefile when a subsequent <a href="https://github.com/HASE-Group/Documents/blob/main/hasepp.md"><tt>dump_state()</tt></a> statement is executed, changes to values of global parameters that occur during a simulation are only recorded in the tracefile when a subsequent
+In the same way that changes of state are only recorded in the tracefile when a subsequent [<tt>dump_state()</tt>](<https://github.com/HASE-Group/Documents/blob/main/hasepp.md>) statement is executed, changes to values of global parameters that occur during a simulation are only recorded in the tracefile when a subsequent
 <tt>dump\_globals()</tt> statement is executed.
 
 ### HASE++: Shared access to global parameters
