@@ -2,7 +2,7 @@
 
 ### Synopsis
 
-The **GLOBALS** section of the project definition file contains definitions of <https://github.com/HASE-Group/Documents/blob/main/parameters.md> that are accessible to all of the entities in the project.
+The **GLOBALS** section of the project definition file contains definitions of <a href="https://github.com/HASE-Group/Documents/blob/main/parameters.md">paramters</a> that are accessible to all of the entities in the project.
 
 
 #### HASE++: Reporting global parameter changes
