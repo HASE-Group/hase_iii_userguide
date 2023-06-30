@@ -24,5 +24,4 @@ in the simulation tracefile.
 &nbsp;&nbsp;&nbsp;&nbsp;nodes_done_mutex.Unlock();
 </pre>
 
-[<- Defining a Project](<https://github.com/HASE-Group/Documents/blob/main/proj\
-ect.md>)
+[<- Defining a Project](<https://github.com/HASE-Group/Documents/blob/main/project.md>)
