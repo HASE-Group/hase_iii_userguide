@@ -22,4 +22,4 @@ Below is a snippet of code from the body of an entity that may be invoked by sev
 &nbsp;&nbsp;&nbsp;&nbsp;nodes_done_mutex.Unlock();
 </pre>
 
-[<- Defining a Project](<https://github.com/HASE-Group/Documents/blob/main/project.md>)
+[<- Defining a Project](<project.md>)
