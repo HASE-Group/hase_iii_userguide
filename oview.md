@@ -1,17 +1,16 @@
 ## System Overview
 
-HASE uses three types of file to specify a simulation: EDL (project.edl), EL (project.elf) and Hase++ (entity.hase) files.
+HASE uses three types of file to specify a simulation: an Entity Description Language file (project.edl), an Entity Layout File (project.elf) and Hase++ (entity.hase) files.
 
-The EDL file describes the components of the architecture, their ports and parameters, the links between them and the hierarchical structure (in essence the <em>logical</em> structure of the experiment).
+The EDL file describes the components of the architecture (entities), their ports and parameters, the links between them and any hierarchical structure (in essence the *logical* structure of the experiment).
 
-The EL file contains information relevant to the *physical* display, *i.e.* where components and ports are positioned on the screen, and any variables to be displayed. When creating the display, HASE also uses gif icons to represent the components on screen.
+The ELF file contains information relevant to the *physical* display, *i.e.* where components and ports are positioned on the screen, and any variables to be displayed. When creating the display, HASE also uses .gif icons to represent the components on screen.
 
 The Hase++ files specify the behaviour of each of the entities.
 
 ### Building the Executable
 
-The figure below shows the process used by HASE to convert the EDL and Hase++
-files into an executable simulation.
+The figure below shows the process used by HASE to convert the EDL and Hase++ files into an executable simulation.
 
 ![HASE Overview](images/HASE_SwareArch.gif)
 
