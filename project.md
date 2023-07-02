@@ -16,4 +16,4 @@ The project definition file is structured as follows:
 
 ![image of EMMA project](images/emma3.png)
 
-[<- Userguide](<https://github.com/HASE-Group/Documents/blob/main/Userguide.md>)
+[<- Userguide](<Userguide.md>)
