@@ -189,4 +189,4 @@ The offset refers to a cell in the array of instructions bound to the symbolic n
 <tr><td></td><td><tt>ADDI R8 R0 17</tt></td></tr>
 </table>
 
-[<- Defining a Project](<https://github.com/HASE-Group/Documents/blob/main/project.md>)
+[<- Defining a Project](<project.md>)
