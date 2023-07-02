@@ -47,4 +47,4 @@ This is the HASE Console window, *i.e.* it acts as a terminal window displaying 
 
 The Status Line displays status information informing the user of the current operating state of HASE.
 
-[<- Userguide](<https://github.com/HASE-Group/Documents/blob/main/Userguide.md>)
+[<- Userguide](<Userguide.md>)
