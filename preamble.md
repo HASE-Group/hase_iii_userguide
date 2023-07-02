@@ -48,4 +48,4 @@ PREAMBLE (
 )
 </pre>
 
-[<- Defining a Project](<https://github.com/HASE-Group/Documents/blob/main/project.md>)
+[<- Defining a Project](<project.md>)
