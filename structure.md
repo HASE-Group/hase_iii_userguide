@@ -26,7 +26,15 @@ The AENTITY construct provides a mechanism for adding components from the entity
 
 **Example:**
 
-<tt>AENTITY cache Primary_Cache (DESCRIPTION ("A primary cache instance"))</tt>
+```
+STRUCTURE (
+AENTITY cache Primary_Cache (
+                DESCRIPTION ("A primary cache instance"))
+		ATTRIB (RPARAM(clockName,CACHE_CLOCK)
+                )
+        )
+```
+- **clockName** allows the clock with which this instantiation of the entity is registered to be selected. This only needs to be specified if the clock to be used is a Pll, *i.e.* not the standard Clock with which an entity is automatically registered through the EXTENDS mechanism.  See [Clocks](<synclib.md>) for further details.
 
 <hr>
 
