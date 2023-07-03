@@ -4,9 +4,8 @@ A typical HASE project consists of a number of entities connected together by li
 
 Most entities also have a set of parameters, *e.g.* a memory entity includes an array parameter which models the actual memory component within the entity.
 
-The project definition file is structured as follows:
-
-```
+The project definition file is structured as follows:  
+<pre>
 project ::= PROJECT (  
     [preamble]<preamble.md>
     [paramlib]<paramlib.md>
@@ -14,7 +13,7 @@ project ::= PROJECT (
     [entitylib]<entitylib.md>
     [structure]<structure.md>
   )
-```
+    </pre>
 
 ![image of EMMA project](images/emma3.png)
 
