@@ -6,13 +6,15 @@ Most entities also have a set of parameters, *e.g.* a memory entity includes an 
 
 The project definition file is structured as follows:
 
-<pre>project ::= PROJECT (  
-    <a href="https://github.com/HASE-Group/Documents/blob/main/preamble.md">preamble</a>  
-    <a href="https://github.com/HASE-Group/Documents/blob/main/paramlib.md">paramlib</a>   
-    <a href="https://github.com/HASE-Group/Documents/blob/main/globals.md">globals</a>  
-    <a href="https://github.com/HASE-Group/Documents/blob/main/entitylib.md">entitylib</a>  
-    <a href="https://github.com/HASE-Group/Documents/blob/main/structure.md">structure</a>  
-)</pre>
+```
+project ::= PROJECT (  
+    [preamble]<preamble.md>
+    [paramlib]<paramlib.md>
+    [globals]<globals.md>
+    [entitylib]<entitylib.md>
+    [structure]<structure.md>
+  )
+```
 
 ![image of EMMA project](images/emma3.png)
 
