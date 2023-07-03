@@ -1,3 +1,4 @@
+<a name="list"></a>
 ## Reference Parameters
 
 Reference parameters are used to declare variables of a HASE supplied type (bool, char, integer, unsigned integer, long, floating-point, string and range):
@@ -18,7 +19,7 @@ project definition file:
 - [RSTRUCT](<parameters.md#rstruct>) ( typename, instance\_name )
 - [RINSTR](<parameters.md#rinstr>) ( typename, instance\_name )
 - [RLINK](<parameters.md#rlink>) ( typename, instance\_name )
-- [RARRAY](<parameters.md#rarray>) ( typename, instance_name*, no\_of\_elements* )
+- [RARRAY](<parameters.md#rarray>) ( typename, instance_name, no\_of\_elements )
 
 When  a reference parameter is declared in the PARAMS section of an [entity](<entity.md>), it may be preceded by a modifier
 (*final*, *read\_only* or *static*).
@@ -37,8 +38,8 @@ The RBOOL declaration allows the user to create boolean parameters. Note that th
 
 Allows bitwise manipulation of an integer via the GUI.
 
-**Example:** RBOOL ( my_flag, FALSE )
-
+**Example:** RBOOL ( my_flag, FALSE )  
+[^](<parameters.md#list>)
 <hr>
 
 <a name="rchar"></a>
