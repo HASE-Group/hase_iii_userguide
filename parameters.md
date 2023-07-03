@@ -2,24 +2,24 @@
 
 Reference parameters are used to declare variables of a HASE supplied type (bool, char, integer, unsigned integer, long, floating-point, string and range):
 
-- [RBOOL](<parameters.md#rbool>) ( instance_name, initial_value )
-- <a href="#rchar">RCHAR</a> ( instance_name, 'initial_char' )
-- <a href="#rint">RINT</a> ( instance_name, initial_value )
-- <a href="#ruint">RUINT</a> ( instance_name, initial_value )
-- <a href="#rlong">RLONG</a> ( instance_name, initial_value )
-- <a href="#rfloat">RFLOAT</a> ( instance_name, initial_value )
-- <a href="#rstring">RSTRING</a> ( instance_name, "initial_string" )
-- <a href="#rrange">RRANGE</a> ( instance_name, min, max, initial_value )
+- [RBOOL](<parameters.md#rbool>) ( instance\_name, initial\_value )
+- [RCHAR](<parameters.md#rchar>) ( instance\_name, 'initial\_char' )
+- [RINT](<parameters.md#rint>) ( instance\_name, initial\_value )
+- [RUINT](<parameters.md#ruint>) ( instance\_name, initial\_value )
+- [RLONG](<parameters.md#rlong>) ( instance\_name, initial\_value )
+- [RFLOAT](<parameters.md#rfloat>) ( instance\_name, initial\_value )
+- [RSTRING](<parameters.md#rstring>) ( instance\_name, "initial\_string" )
+- [RRANGE](<parameters.md#rrange>) ( instance\_name, min, max, initial\_value )
 
 or of a parameter type previously defined in the [parameter library](<paramlib.md>) section of the
 project definition file:
 
-- <a href="#renum">RENUM</a> ( typename, instance\_name, initial\_value )
-- <a href="#rstruct">RSTRUCT</a> ( typename, instance\_name )
-- <a href="#rinstr">RINSTR</a> ( typename, instance\_name )
-- <a href="#rlink">RLINK</a> ( typename, instance\_name )
-- <a href="#rarray">RARRAY</a> ( typename, instance_name*, no\_of\_elements* )
-</ul>
+- [RENUM](<parameters.md#renum>) ( typename, instance\_name, initial\_value )
+- [RSTRUCT](<parameters.md#rstruct>) ( typename, instance\_name )
+- [RINSTR](<parameters.md#rinstr>) ( typename, instance\_name )
+- [RLINK](<parameters.md#rlink>) ( typename, instance\_name )
+- [RARRAY](<parameters.md#rarray>) ( typename, instance_name*, no\_of\_elements* )
+
 When  a reference parameter is declared in the PARAMS section of an [entity](<entity.md>), it may be preceded by a modifier
 (*final*, *read\_only* or *static*).
 
