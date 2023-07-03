@@ -7,11 +7,11 @@ Most entities also have a set of parameters, *e.g.* a memory entity includes an 
 The project definition file is structured as follows:  
 
 project ::= PROJECT (  
-    [preamble]<preamble.md>  
-    [paramlib]<paramlib.md>  
-    [globals]<globals.md>  
-    [entitylib]<entitylib.md>  
-    [structure]<structure.md>  
+    [preamble](<preamble.md>)  
+    [paramlib](<paramlib.md>)  
+    [globals](<globals.md>)  
+    [entitylib](<entitylib.md>)  
+    [structure](<structure.md>)  
   )
 
 ![image of EMMA project](images/emma3.png)
