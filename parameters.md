@@ -2,7 +2,7 @@
 
 Reference parameters are used to declare variables of a HASE supplied type (bool, char, integer, unsigned integer, long, floating-point, string and range):
 
-- <a href="#rbit">RBOOL</a> ( instance_name, initial_value )
+- [RBOOL](<parameters.md#rbool>) ( instance_name, initial_value )
 - <a href="#rchar">RCHAR</a> ( instance_name, 'initial_char' )
 - <a href="#rint">RINT</a> ( instance_name, initial_value )
 - <a href="#ruint">RUINT</a> ( instance_name, initial_value )
