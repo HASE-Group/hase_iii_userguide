@@ -16,7 +16,7 @@ ENTITY entity\_type\_name *library\_name* (
 	 )  
 
 - **entity\_type\_name** *str* - The name of the type of entity to be created.  This is used to create instances of the component in the architecture, and to identify the correct simulation code and icon.  
-- **library\_name** *str (optional)* - The name of library from which the behaviour is to be taken. If the library\_name is not specified, then the user must provide a .hase description of the behaviour.  See [Clocks](<synclib.md> for a description of components which are currently in the HASE library.  
+- **library\_name** *str (optional)* - The name of library from which the behaviour is to be taken. If the library\_name is not specified, then the user must provide a .hase description of the behaviour.  See [Clocks](<synclib.md>) for a description of components which are currently in the HASE library.  
 - **abstract_type** *str (optional)* - The name of
 the [abstract entity](<abstract.md> from which this entity is intended to inherit.  The abstract entity must have previously been defined in the [entity library](<entitylib.m>)  
 - **description** *str* - A description of an aspect of the entity.  
