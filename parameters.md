@@ -49,7 +49,8 @@ The RCHAR declaration enables the user to create character parameters. Note that
 **Example:** RCHAR ( mode, 'a' )  
 [<- top](<parameters.md#list>)
 <hr>
-<a name="rint"></a> <font size="+2">**rInt** - Reference Integer Parameter</font> - RINT ( instance\_name, *initial\_value*)  
+<a name="rint"></a>
+<font size="+2">**rInt** - Reference Integer Parameter</font> - RINT ( instance\_name, *initial\_value*)  
 
 The RINT declaration enables the user to create integer parameters. Note that there is no corresponding INT definition in the parameter library because 'integer' is a standard type and is known to HASE. For this reason no type name is supplied to the RINT constructor.
 
