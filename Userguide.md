@@ -7,3 +7,4 @@ USERGUIDE - CONTENTS
 [Entities](<entity.md>)  
 [Defining a Project](<project.md>)  
 [Reference Parameters](<parameters.md>)  
+[Initialising Parameters](<rparams.md>)
