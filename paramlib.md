@@ -37,9 +37,9 @@ The STRUCT construct allows the creation of data structures, similar to the stru
 - **typename:** *str* - The name of the structure, used when creating instances.  
 - **reference\_parameter:** - See the Reference Parameters section.  
 **Example:**
-<tt>
+```
 STRUCT ( Data_Packet, [ RINT (Packet_No, 0) , RINT (Packet_Data, 0) ] )
-</tt>
+```
 
 <HR>
 
@@ -131,9 +131,9 @@ if (IR.function == t_simple_instrn_set::JUMP)
 
 **Example:**  
  
-<tt>LINK ( DLink, [ ( MEM\_R, RINT ( Address, 0) ),  
-( MEM\_W, RSTRUCT ( Info, I ) : PktIcon ) ] )</tt>
-
+```
+LINK ( DLink, [ ( MEM\_R, RINT ( Address, 0) ),  ( MEM\_W, RSTRUCT ( Info, I ) : PktIcon ) ] )
+```
 <HR>
 <a name="array"></a>
 
@@ -148,8 +148,9 @@ href="parameters.html#rarray">RARRAY</a>. Using RARRAY allows the display of arr
 
 **Example:**  
  
-<tt>ARRAY (data\_mem\_array, int);</tt>
-
+```
+ARRAY (data\_mem\_array, int);
+```
 <hr>
 <a name="arrayi"></A>
 
@@ -163,30 +164,33 @@ href="parameters.html#rarray">RARRAY</a>. Using RARRAY allows the display of arr
 - **type\_of\_elements:** *str* - The name of the type of the elements in the list.  This should be a HASE built-in type or a type previously defined in the parameter library section.
 
 **Example:**
- 
-<tt>ARRAYI (instr\_mem\_array, t\_dlx\_instrn\_set);</tt>
-
+``` 
+ARRAYI (instr\_mem\_array, t\_dlx\_instrn\_set);
+```
 **Labels**
 
 Labels are automatically built from the symbolic name associated with the ARRAYI construct. These labels can be then used in Hase++ code by means of a method called *process*. The signature of this method is as follows:
 
-<tt>process(char * symbolicName, int offset)</tt>  
-
+```
+process(char * symbolicName, int offset)
+```
 The offset refers to a cell in the array of instructions bound to the symbolic name of the first parameter.
 
 **Hase++ Example:**  
-<tt>int addr = instr\_mem.process(InstrMemRequest.addr.label, InstrMemRequest.addr.offset);</tt>  
+```
+int addr = instr\_mem.process(InstrMemRequest.addr.label, InstrMemRequest.addr.offset);
+```
 
 **Instruction Memory Example:**  
-<table>
-<tr><td><tt>label2:</tt></td> <td></td></tr>
-<tr><td></td><td><tt>ADDI R7 R7 42</tt></td></tr>
-<tr><td></td><td><tt>BNEZ R7 label2</tt></td></tr>
-<tr><td></td><td><tt>SUBI R7 R7 126</tt></td></tr>
-<tr><td></td><td><tt>J label3</tt></td></tr>
-<tr><td></td><td><tt>ADDI R8 R0 68</tt></td></tr>
-<tr><td><tt>label3:</tt></td></tr>
-<tr><td></td><td><tt>ADDI R8 R0 17</tt></td></tr>
-</table>
+```
+label2:
+        ADDI R7 R7 42
+        BNEZ R7 label2
+        SUBI R7 R7 126
+        J label3
+        ADDI R8 R0 68
+label3:
+        ADDI R8 R0 17
+```
 
 [<- Defining a Project](<project.md>)
