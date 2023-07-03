@@ -35,18 +35,18 @@ The *read_only* modifier is used when a parameter is declared which must not be 
 ENTITY Cache (  
 	DESCRIPTION ( "A generic parameterized cache" )  
 	PARAMS (  
-			 RARRAY ( Memory, cache_contents )  
-			 RINT ( access_time, 2 )
-			 RENUM ( Assciativity, cache_assoc, 0 )
-			 read_only RINT ( hit, 0 )
-			 )
+		 RARRAY ( Memory, cache_contents )  
+		 RINT ( access_time, 2 )
+		 RENUM ( Assciativity, cache_assoc, 0 )
+		 read_only RINT ( hit, 0 )
+	 )
 	PORTS (
-			PORT ( to_cpu, LinkData, SOURCE )
-			PORT ( from_cpu, LinkData, DESTINATION )
-			PORT ( to_main_mem, LinkData, SOURCE )
-			PORT ( from_main_mem, LinkData, DESTINATION )
-		  )
-		)
+		PORT ( to_cpu, LinkData, SOURCE )
+		PORT ( from_cpu, LinkData, DESTINATION )
+		PORT ( to_main_mem, LinkData, SOURCE )
+		PORT ( from_main_mem, LinkData, DESTINATION )
+	)
+      );
 ```
 
 [<- Userguide](<Userguide.md>)
