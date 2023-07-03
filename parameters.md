@@ -24,7 +24,8 @@ project definition file:
 When  a reference parameter is declared in the PARAMS section of an [entity](<entity.md>), it may be preceded by a modifier
 (*final*, *read\_only* or *static*).
 
-<hr>  
+<hr>
+
 - **typename:** *str* - The name of the type to be used (ENUM for RENUM, BIT for RBIT, ...).
 - **instance_name:** *str* - The instance name of the parameter to be created. 
 - **initial_value:** *int* - The initial value of the parameter.
@@ -83,7 +84,8 @@ Long integers can be displayed in decimal or hexadecimal format, as for integers
 **Example:** RLONG ( memory_size, 12 )  
 [<- top](<parameters.md#list>)
 <hr>
-- <a name="rfloat"></a>
+
+<a name="rfloat"></a>
 <font size="+2">**rFloat** - Reference Floating-Point Parameter</font> 
 - RFLOAT ( instance\_name*, initial\_value*)<p>
 
@@ -92,6 +94,7 @@ The RFLOAT construct provides a mechanism for creating floating-point variables 
 **Example:** RFLOAT ( Average_Access_Time, 3.4 )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rstring"></a>
 <font size="+2">**rString** - Reference String Parameter</font>  - RSTRING ( instance_name, "initial_string", )
 
@@ -101,6 +104,7 @@ The RSTRING declaration provides a method of creating string parameters. There i
 RSTRING ( Cache\_Associativity, "Fully\_Associative" )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rrange"></a>
 <font size="+2">**rRange** - Reference Range Parameter</font>  - RRANGE ( instance_name, min, max, initial_value)
 
@@ -110,6 +114,7 @@ interface is expected to show a slider allowing the user to alter the parameter 
 **Example:** RRANGE ( access_time, 1, 10, 5 )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="renum"></a>
 <font size="+2">**rEnum** - Reference Enumerated Type Parameter</font> - RENUM ( typename, instance\_name, initial\_state)
 
@@ -130,6 +135,7 @@ The RSTRUCT declaration allows the creation of instances (variables) of a struct
 **Example:** RSTRUCT ( Data\_Packet, message )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rinstr"></a>
 <font size="+2">**rInstr** - Reference Instruction Parameter</font> - RINSTR ( typename, instance_name)
 
@@ -138,6 +144,7 @@ The RINSTR declaration gives a method of creating instances of an instruction se
 **Example:** RINSTR ( instr\_set, SPARC\_Instruction\_Set )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rlink"></a>
 <font size="+2">**rLink** - Reference Link Parameter</font> - RLINK ( typename, instance\_name )
 
@@ -146,6 +153,7 @@ The RLINK construct enables the creation of a link parameter of a type [LINK](<p
 **Example:** LINK ( DLink, link_data )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rarray"></a>
 <font size="+2">**rArray** - Reference Array Parameter</font> - RARRAY ( typename, instance_name, no_of_elements )
 
