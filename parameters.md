@@ -49,6 +49,7 @@ The RCHAR declaration enables the user to create character parameters. Note that
 **Example:** RCHAR ( mode, 'a' )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rint"></a>
 <font size="+2">**rInt** - Reference Integer Parameter</font> - RINT ( instance\_name, *initial\_value*)  
 
@@ -60,6 +61,7 @@ Integers normally appear in decimal format in the display. If the *initial_value
 RINT ( CODEWORD, 0X0 )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="ruint"></a>
 <font size="+2">**rUint** - Reference Unsigned Integer Parameter</font> - RUINT ( instance_name, *initial_value*)
 
@@ -70,6 +72,7 @@ Unsigned integers can be displayed in decimal or hexadecimal format, as for inte
 **Example:** RUINT ( memory_size, 12 )  
 [<- top](<parameters.md#list>)
 <hr>
+
 <a name="rlong"></a>
 <font size="+2">**rLong** - Reference Long Integer Parameter</font> - RLONG ( instance_name, *initial_value*)
 
