@@ -23,9 +23,9 @@ The ENUM declaration enables the creation of an enumerated type similar to those
 in the preamble). Also the .btm and .gif extensions can be missed off the icon name as these are automatically added (gif files are searched for first).
 
 **Example:**
-<tt>
+```
 ENUM ( cache\_state, [ cache\_hit : hit\_icon, cache\_miss : miss\_icon ] )
-</tt>  
+```  
 
 <HR>
 
@@ -98,21 +98,21 @@ this allows the construct <tt>if (IR.decode\_ALU())</tt> to be used in *e.g.* th
 register of type <tt>t\_simple\_instrn\_set</tt>.
 
 6. Individual instructions within the <tt>ALU</tt> set can be decoded using a <tt>switch</tt> construct:
-<pre>
+```
  switch (IR.function)  
   {
-     case ADD:	// ADD Rx Ry Rz: Rx = Ry + Rz 
-     dest_op = src1_op + src2_op; 
-     break; 
-    *etc.* 
+   case ADD:	// ADD Rx Ry Rz: Rx = Ry + Rz 
+   dest_op = src1_op + src2_op; 
+   break; 
+   *etc.* 
   }
-</pre>
+```
 *OR* by using the construct:
-<pre>
+```
 if (IR.function == t_simple_instrn_set::JUMP) 
  {  
  }  
-</pre>
+```
 7. The semantics of the instructions are determined by the behavioural code in the Hase++ files. Thus the above definitions could be used as a basis for creating the instruction set of the simple processor described in <a href="project.html">Defining a Project</a>.
 
 <HR>
