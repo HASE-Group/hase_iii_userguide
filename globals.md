@@ -2,12 +2,12 @@
 
 ### Synopsis
 
-The **GLOBALS** section of the project definition file contains definitions of [parameters](<https://github.com/HASE-Group/Documents/blob/main/parameters.md>) that are accessible to all of the entities in the project.
+The **GLOBALS** section of the project definition file contains definitions of [parameters](<parameters.md>) that are accessible to all of the entities in the project.
 
 
 #### HASE++: Reporting global parameter changes
 
-In the same way that changes of state are only recorded in the tracefile when a subsequent [<tt>dump_state()</tt>](<https://github.com/HASE-Group/Documents/blob/main/hasepp.md>) statement is executed, changes to values of global parameters that occur during a simulation are only recorded in the tracefile when a subsequent <tt>dump\_globals()</tt> statement is executed.
+In the same way that changes of state are only recorded in the tracefile when a subsequent [<tt>dump_state()</tt>](<hasepp.md>) statement is executed, changes to values of global parameters that occur during a simulation are only recorded in the tracefile when a subsequent <tt>dump\_globals()</tt> statement is executed.
 
 ### HASE++: Shared access to global parameters
 
@@ -15,11 +15,11 @@ Global parameters can be accessed from the body of any entity, therefore extra c
 
 Below is a snippet of code from the body of an entity that may be invoked by several instances of that entity (executing as separate threads simultaneously).  The .Lock() and .Unlock() calls ensure that the modification to the global parameter *nodes_done* is synchronised between the instances of the entity. dump\_globals() is called after modification to record the change to *nodes\_done* in the simulation tracefile.
 
-<pre>
-&nbsp;&nbsp;&nbsp;&nbsp;nodes_done_mutex.Lock();
-&nbsp;&nbsp;&nbsp;&nbsp;nodes_done++;
-&nbsp;&nbsp;&nbsp;&nbsp;dump_globals();
-&nbsp;&nbsp;&nbsp;&nbsp;nodes_done_mutex.Unlock();
-</pre>
+```
+    nodes_done_mutex.Lock();
+    nodes_done++;
+    dump_globals();
+    nodes_done_mutex.Unlock();
+```
 
 [<- Defining a Project](<project.md>)
