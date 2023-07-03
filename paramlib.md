@@ -24,7 +24,7 @@ in the preamble). Also the .btm and .gif extensions can be missed off the icon n
 
 **Example:**
 ```
-ENUM ( cache\_state, [ cache\_hit : hit\_icon, cache\_miss : miss\_icon ] )
+ENUM ( cache_state, [ cache_hit : hit_icon, cache_miss : miss_icon ] )
 ```  
 
 <HR>
@@ -149,7 +149,7 @@ href="parameters.html#rarray">RARRAY</a>. Using RARRAY allows the display of arr
 **Example:**  
  
 ```
-ARRAY (data\_mem\_array, int);
+ARRAY (data_mem_array, int);
 ```
 <hr>
 <a name="arrayi"></A>
@@ -165,7 +165,7 @@ href="parameters.html#rarray">RARRAY</a>. Using RARRAY allows the display of arr
 
 **Example:**
 ``` 
-ARRAYI (instr\_mem\_array, t\_dlx\_instrn\_set);
+ARRAYI (instr_mem_array, t_dlx_instrn_set);
 ```
 **Labels**
 
@@ -178,7 +178,7 @@ The offset refers to a cell in the array of instructions bound to the symbolic n
 
 **Hase++ Example:**  
 ```
-int addr = instr\_mem.process(InstrMemRequest.addr.label, InstrMemRequest.addr.offset);
+int addr = instr_mem.process(InstrMemRequest.addr.label, InstrMemRequest.addr.offset);
 ```
 
 **Instruction Memory Example:**  
