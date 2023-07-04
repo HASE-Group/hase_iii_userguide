@@ -105,3 +105,5 @@ A .mem file may contain sections.  The section separator is a line of the form: 
 
 When a file contains sections (**no\_section**), the
 **i**<sup>th</sup> array which has to be initialised from that file will be initialised with the content of the (**i modulo no\_section**)<sup>th</sup> section.<BR> The order of the arrays is determined by the declaration order of instances (AENTITY) in the STRUCTURE section part of the project definition file. The **//$next section** construct is most frequently used with MESH entities.
+
+[<- Userguide](<Userguide.md>)
