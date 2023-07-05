@@ -11,7 +11,7 @@ project ::= PROJECT (
 &nbsp; &nbsp; &nbsp; [PARAMLIB](<paramlib.md>)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Reference Parameters](parameters.md)  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Initialising Parameters](rparam.md)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Reference Arrays](arrays.md)  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Initialising Arrays](arrays.md)  
 &nbsp; &nbsp; &nbsp; [GLOBALS](<globals.md>)  
 &nbsp; &nbsp; &nbsp; [ENTITYLIB](<entitylib.md>)  
 &nbsp; &nbsp; &nbsp; [STRUCTURE](<structure.md>)  
