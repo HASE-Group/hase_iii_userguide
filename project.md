@@ -16,7 +16,7 @@ project ::= PROJECT (
 &nbsp; &nbsp; &nbsp; [ENTITYLIB](<entitylib.md>)  
 &nbsp; &nbsp; &nbsp; [STRUCTURE](<structure.md>)  
   )
-
+[<- Userguide](<Userguide.md>)
 ![image of EMMA project](images/emma3.png)
 
-[<- Userguide](<Userguide.md>)
+
