@@ -2,7 +2,7 @@
 
 The **STRUCTURE** section of the project definition describes which entities from the entity library are to be included in the architecture description and how many of them there are. It also deals with how the entities are connected together.
 
-- **architecture\_entity** - This defines a component [AENTITY](<#aentity>)) to be included in the architecture.  
+- **architecture\_entity** - This defines a component [AENTITY](<#aentity>) to be included in the architecture.  
 
 - **communication\_channel** - This defines a link [CLINK](<#clink>) that interconnects AENTITIES in the architecture.
 
