@@ -37,7 +37,7 @@ AENTITY cache Primary_Cache (
 - **clockName** allows the clock with which this instantiation of the entity is registered to be selected. This only needs to be specified if the clock to be used is a Pll, *i.e.* not the standard Clock with which an entity is automatically registered through the EXTENDS mechanism.  See [Clocks](<synclib.md>) for further details.
 
 <hr>
-
+<a name="clink"></a>
 ## CLINK - Communication links between entities
 
 ### Synopsis
