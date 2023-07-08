@@ -31,7 +31,7 @@ descendant ::= clink |
 
 - **entity\_type\_name\_def** *str* - The name of the type of higher level entity to be created. This is used to create instances of the component in the architecture and to identify the correct simulation code and icon.
 - **descendant** - The descendant components describe which entities and their interconnections are to be used to compose the higher level.  Therefore the descendant_component can be of two types,
-a *child entity* (see below) or a <a href="structure.md#link">link</a>).
+a *child entity* (see below) or a [link](<structure.md#link>)).
 - **description\_txt** *str* - A description of an aspect of the higher level entity.
 - **entity\_param** - *Optional* - This section of the higher level entity definition describes the parameters that are associated with the compound entity itself.
 - **port** - *Optional* This section of the entity
