@@ -38,6 +38,7 @@ AENTITY cache Primary_Cache (
 
 <hr>
 <a name="clink"></a>
+
 ## CLINK - Communication links between entities
 
 ### Synopsis
