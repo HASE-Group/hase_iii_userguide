@@ -79,3 +79,5 @@ Some optional information may also be added after the position information in th
 Entities generated in this example are named:
 
 <tt>PE1\_0\_, PE1_1\_, ... , PE1\_SIZE1-1\_</tt>
+
+[<- Userguide](Userguide.md)
