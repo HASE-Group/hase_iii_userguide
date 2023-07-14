@@ -75,15 +75,12 @@ The STATES declaration provides a mechanism for associating a gif image with a p
 
 object\_id : STATES state1\_name gif\_image1 state2\_name gif\_image2 ...
 
-- **object_id** *str* - The name of the entity. This can be the type name of an entity defined in the entity library, in which case the state will be associated with all the entities of that type. It c\
-an also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, \
-should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
+- **object_id** *str* - The name of the entity. This can be the type name of an entity defined in the entity library, in which case the state will be associated with all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
 
 **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**.
 - **state1\_name ***str* - One of the states defined in the ENTITY declaration.
-- **gif_image1** * str* - The gif image to be associated with state1. HASE looks for this file in the project's *bitmaps* (image repository) subdirectory, then in HASE's own internal image repository. \
-If it cannot be found in either, the HASE default_ent.gif image is used. If no state is defined or no image is associated with a state, the name of the entity (not of the instance) is used to find the \
-gif image.
+- **gif_image1** * str* - The gif image to be associated with state1. HASE looks for this file in the project's *bitmaps* (image repository) subdirectory, then in HASE's own internal image repository.
+If it cannot be found in either, the HASE default_ent.gif image is used. If no state is defined or no image is associated with a state, the name of the entity (not of the instance) is used to find the gif image.
 
 ### Example
 
@@ -110,8 +107,7 @@ MEMORY : STATES M_IDLE:memory M_READ:mem_read  M_WRITE:mem_write
 
 ### Synopsis
 
-The **PORT** construct enables the creation of communication ports for an entity.  Ports from different entities are connected together via [links](<links.md>) allowing entities to exchange information\
-.
+The **PORT** construct enables the creation of communication ports for an entity. Ports from different entities are connected together via [links](<links.md>) allowing entities to exchange information.
 
 The **XPORT** construct enables different instances of an entity to have different numbers of ports. This is often convenient for busses, for example.
 
@@ -119,10 +115,8 @@ The **XPORT** construct enables different instances of an entity to have differe
 
 PORT ( port\_name, message\_type, *port\_type* )
 
-- **port_name** *str* - This defines the name of the port to be created. It is used to identify the port when messages are to be sent from the entity and in the creation of links.  For any one entity t\
-he port_name must be unique, though the same port name can be used on different entities.
-- **message_type** *str* - The message type defines the type of messages that the link connected to the port can handle. It should specify the type name of a [link parameter](<paramlib.md>) defined in \
-the parameter library.
+- **port_name** *str* - This defines the name of the port to be created. It is used to identify the port when messages are to be sent from the entity and in the creation of links.  For any one entity the port_name must be unique, though the same port name can be used on different entities.
+- **message_type** *str* - The message type defines the type of messages that the link connected to the port can handle. It should specify the type name of a [link parameter](<paramlib.md>) defined in the parameter library.
 - **port_type** *str* - This specifies the type of the port, *i.e.* whether it is a source port or a destination port. This is specified by using **SOURCE** or **DESTINATION** in the PORT constructor.
 
 ### Example
@@ -133,8 +127,7 @@ PORT ( processor\_to\_memory, DataLink, SOURCE )
 
 XPORT (no\_of\_ports, port\_name, message\_type*, port\_type* )
 
-- **no\_of\_ports** - the default number of ports of this type; the actual number of ports (if different) is specified when an instance of the entity is created in the STRUCTURE section of the project \
-definition file.
+- **no\_of\_ports** - the default number of ports of this type; the actual number of ports (if different) is specified when an instance of the entity is created in the STRUCTURE section of the project definition file.
 
 - **port\_name** - as for PORT, this defines the name of the port(s) to be created. Because XPORT defines more than one port, HASE automatically names these ports as port\_name0, port\_name1, *etc.*
 
