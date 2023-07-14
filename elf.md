@@ -101,6 +101,7 @@ MEMORY : position (350,30)
 MEMORY : STATES M_IDLE:memory M_READ:mem_read  M_WRITE:mem_write
 ...
 ```
+[<- top](<#top>)
 
 <a name="port"></a>
 ## PORT - Communication Port Declaration
