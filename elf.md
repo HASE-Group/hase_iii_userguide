@@ -1,4 +1,4 @@
-<a name="top"> ## Screen Layout<a>
+<a name="top"></a> ## Screen Layout
 
 The screen layout in HASEIII is defined in an Entity Layout File containing information related to an entity (position, states, ports and parameters) and to a link (link corner positions) when displayed on screen.
 
@@ -20,7 +20,7 @@ where **object_id** can be either an entity name (which has been declared in the
 
 Note: The syntax given for the parts of the entity layout file may run onto a second line, however when creating a layout file, the part being specified, for example, a port's position, must not contain any new line characters in the specification.
 
-<a name="position">## Entity Layout: POSITION</a>
+<a name="position"></a>## Entity Layout: POSITION
 
 ### Synopsis 
 
@@ -63,7 +63,7 @@ Some entities ( *e.g.* meshes) have up additional items of layout information.
 
 [<- top](<#top>)
 
-<a name="states">### Entity Layout: STATES</a>
+<a name="states"></a>### Entity Layout: STATES
 
 ### Synopsis
 
