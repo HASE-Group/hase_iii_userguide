@@ -105,7 +105,7 @@ MEMORY : STATES M_IDLE:memory M_READ:mem_read  M_WRITE:mem_write
 ...
 ```
 
-<a name="port">
+<a name="port"></a>
 ## PORT - Communication Port Declaration
 
 ### Synopsis
