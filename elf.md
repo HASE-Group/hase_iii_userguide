@@ -7,7 +7,7 @@ An Entity Layout File contains a list of lines each of which should have one of 
 
 - object_id : [POSITION](<#position>) (x,y,z) 
 *info1 info2 info3*
-- object_id : [STATES](<states.html>) state1\_name gif\_image1 state2\_name gif\_image2 ...
+- object_id : [STATES](<#states>) state1\_name gif\_image1 state2\_name gif\_image2 ...
 - object_id : 
 <A HREF="elf-port.html">PORT</A> port\_name SIDE entity\_side POSITION port\_position
 *position_string ICON icon_file*
@@ -64,4 +64,47 @@ Some entities ( *e.g.* meshes) have up additional items of layout information.
 <tt> Memory\_Hierarchy.secondary\_cache : POSITION (100,50)</tt>
 
 [<- top](<#top>)
+
+<a name="states"></a>
+### Entity Layout: STATES
+
+### Synopsis
+
+The STATES declaration provides a mechanism for associating a gif image with a particular state of an entity.
+
+### Syntax
+
+object\_id : STATES state1\_name gif\_image1 state2\_name gif\_image2 ...
+
+- **object_id** *str* - The name of the entity. This can be the type name of an entity defined in the entity library, in which case the state will be associated with all the entities of that type. It c\
+an also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, \
+should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
+
+**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**.
+- **state1\_name ***str* - One of the states defined in the ENTITY declaration.
+- **gif_image1** * str* - The gif image to be associated with state1. HASE looks for this file in the project's *bitmaps* (image repository) subdirectory, then in HASE's own internal image repository. \
+If it cannot be found in either, the HASE default_ent.gif image is used. If no state is defined or no image is associated with a state, the name of the entity (not of the instance) is used to find the \
+gif image.
+
+### Example
+
+Entity definition:
+
+```
+ENTITY memory  (
+ DESCRIPTION ("Memory")
+ STATES (M_IDLE, M_READ, M_WRITE)
+ ...
+        );
+```
+
+Entity layout:
+
+```
+MEMORY : position (350,30)
+MEMORY : STATES M_IDLE:memory M_READ:mem_read  M_WRITE:mem_write
+...
+```
+[<- top](<#top>)
+
 [<- Userguide](<Userguide.md>)
