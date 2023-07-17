@@ -8,10 +8,10 @@ An Entity Layout File contains a list of lines each of which should have one of 
 - object_id : [POSITION](<#position>) (x,y,z) 
 *info1 info2 info3*
 - object_id : [STATES](<#states>) state1\_name gif\_image1 state2\_name gif\_image2 ...
-- object_id : [PORT](<#port>) port\_name SIDE entity\_side POSITION port\_position
+- object_id : [PORT](<#elf-port>) port\_name SIDE entity\_side POSITION port\_position
 *position_string ICON icon_file*
-- object\_id : [PARAM](<elf-param.html>) param\_name MODE mode\_name  POSITION (param\_x,param\_y)
-- object\_id : [LINKCORNER](<corners.html>) src\_entity src\_port dest\_entity dest\_port no\_of\_corners *(cx1,cy1) ...*
+- object\_id : [PARAM](<elf-param>) param\_name MODE mode\_name  POSITION (param\_x,param\_y)
+- object\_id : [LINKCORNER](<corners>) src\_entity src\_port dest\_entity dest\_port no\_of\_corners *(cx1,cy1) ...*
 - [bottomcorner](<bottom.html>) : position (x,y)
 
 where **object_id** can be either an entity name (which has been declared in the entity library) or a component name defined as a CHILD of a COMPENTITY or as an AENTITY STRUCTURE.
@@ -103,56 +103,36 @@ MEMORY : STATES M_IDLE:memory M_READ:mem_read  M_WRITE:mem_write
 ```
 [<- top](<#top>)
 
-<a name="port"></a>
-## PORT - Communication Port Declaration
+<a name="elf-port"></a>
+## Entity Layout: PORT
 
 ### Synopsis
 
-The **PORT** construct enables the creation of communication ports for an entity. Ports from different entities are connected together via [links](<links.md>) allowing entities to exchange information.
+The PORT declaration provides a mechanism to position a port on any side of an entity and at any point along the specified side.
 
-The **XPORT** construct enables different instances of an entity to have different numbers of ports. This is often convenient for busses, for example.
+### Syntax
 
-### PORT Syntax
+<tt>object\_id : PORT port\_name SIDE entity\_side POSITION port\_position position\_string ICON icon\_file</tt>
 
-PORT ( port\_name, message\_type, *port\_type* )
+- **object_id** *str* - The name of the entity with which the port is associated.  This can be the type name of an entity defined in the entity library, in which case the port will be positioned on all the entities of that type. It can also be the instance name of an entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
+**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**
+The port information given to an instance overrides the port information of the library component.
 
-- **port_name** *str* - This defines the name of the port to be created. It is used to identify the port when messages are to be sent from the entity and in the creation of links.  For any one entity the port_name must be unique, though the same port name can be used on different entities.
-- **message_type** *str* - The message type defines the type of messages that the link connected to the port can handle. It should specify the type name of a [link parameter](<paramlib.md>) defined in the parameter library.
-- **port_type** *str* - This specifies the type of the port, *i.e.* whether it is a source port or a destination port. This is specified by using **SOURCE** or **DESTINATION** in the PORT constructor.
+- **port\_name** *str* - The name of the port to be positioned.
+- **entity\_side** *str* - The name of the side of the entityon which the port is to be positioned. This should be
+**TOP**, **BOTTOM**, **LEFT** or **RIGHT**.
+- **port\_position** *int* - The number of pixels along the specified side on which the port is to be positioned. The number of pixels is relative to the top of the entity's icon for ports on the **LEFT** or **RIGHT**, and relative to the left of the entity's icon for ports on the **TOP** or **BOTTOM**. The value determines the position of the centre of the port and not the top/left.
+- **icon\_file** *str* - The icon file used to represent the port. HASE first looks for this file (icon_file.gif) in the project's image repository directory (declared in the PREAMBLE), then in HASE's own image repository, which has five entries:
 
-### Example
 
-PORT ( processor\_to\_memory, DataLink, SOURCE )
+portdot: ![port dot](images/portdot.gif) &nbsp; portu: ![port up](images/portu.gif) &nbsp; portd: ![port down](images/portd.gif) &nbsp; portl: ![port left](images/portl.gif) &nbsp; portr: ![port righte](images/portr.gif)
 
-### XPORT Syntax
-
-XPORT (no\_of\_ports, port\_name, message\_type*, port\_type* )
-
-- **no\_of\_ports** - the default number of ports of this type; the actual number of ports (if different) is specified when an instance of the entity is created in the STRUCTURE section of the project definition file.
-
-- **port\_name** - as for PORT, this defines the name of the port(s) to be created. Because XPORT defines more than one port, HASE automatically names these ports as port\_name0, port\_name1, *etc.*
-
--  **message\_type**, **port\_type** - as for PORT
+If no icon file is specified, the default is *portdot*. In addition, specifying *portblank* means that no port icon is drawn.
 
 ### Example
 
-```
-ENTITY bus (
- PORTS (
-   XPORT(2, input,l_bus,DESTINATION);
-   XPORT(2, output,l_bus,SOURCE);
-   )
-        );
-```
 
-```
-AENTITY bus BUS1 (
- DESCRIPTION("bus1")
-  ATTRIB ( XPORT (input, 3) );
- );
-```
-
-This creates a bus (BUS1) with 3 input ports (input0, input1, input2) and 2 output ports (output0, output1).
+<tt>REGISTERS : port input side BOTTOM position 45 ICON portu</tt>
 
 [<- top](<#top>)
 
