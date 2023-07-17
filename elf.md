@@ -114,8 +114,8 @@ The PORT declaration provides a mechanism to position a port on any side of an e
 
 <tt>object\_id : PORT port\_name SIDE entity\_side POSITION port\_position position\_string ICON icon\_file</tt>
 
-- **object_id** *str* - The name of the entity with which the port is associated.  This can be the type name of an entity defined in the entity library, in which case the port will be positioned on all the entities of that type. It can also be the instance name of an entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
-**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**
+- **object_id** *str* - The name of the entity with which the port is associated.  This can be the type name of an entity defined in the entity library, in which case the port will be positioned on all the entities of that type. It can also be the instance name of an entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:  
+**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
 The port information given to an instance overrides the port information of the library component.
 
 - **port\_name** *str* - The name of the port to be positioned.
