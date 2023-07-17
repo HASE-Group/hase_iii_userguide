@@ -75,9 +75,7 @@ The STATES declaration provides a mechanism for associating a gif image with a p
 
 object\_id : STATES state1\_name gif\_image1 state2\_name gif\_image2 ...
 
-- **object_id** *str* - The name of the entity. This can be the type name of an entity defined in the entity library, in which case the state will be associated with all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
-
-**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**.
+- **object_id** *str* - The name of the entity. This can be the type name of an entity defined in the entity library, in which case the state will be associated with all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is: **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**.
 - **state1\_name ***str* - One of the states defined in the ENTITY declaration.
 - **gif_image1** * str* - The gif image to be associated with state1. HASE looks for this file in the project's *bitmaps* (image repository) subdirectory, then in HASE's own internal image repository.
 If it cannot be found in either, the HASE default_ent.gif image is used. If no state is defined or no image is associated with a state, the name of the entity (not of the instance) is used to find the gif image.
@@ -114,8 +112,7 @@ The PORT declaration provides a mechanism to position a port on any side of an e
 
 <tt>object\_id : PORT port\_name SIDE entity\_side POSITION port\_position position\_string ICON icon\_file</tt>
 
-- **object_id** *str* - The name of the entity with which the port is associated.  This can be the type name of an entity defined in the entity library, in which case the port will be positioned on all the entities of that type. It can also be the instance name of an entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:  
-**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
+- **object_id** *str* - The name of the entity with which the port is associated.  This can be the type name of an entity defined in the entity library, in which case the port will be positioned on all the entities of that type. It can also be the instance name of an entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is: **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
 The port information given to an instance overrides the port information of the library component.
 
 - **port\_name** *str* - The name of the port to be positioned.
@@ -123,7 +120,6 @@ The port information given to an instance overrides the port information of the 
 **TOP**, **BOTTOM**, **LEFT** or **RIGHT**.
 - **port\_position** *int* - The number of pixels along the specified side on which the port is to be positioned. The number of pixels is relative to the top of the entity's icon for ports on the **LEFT** or **RIGHT**, and relative to the left of the entity's icon for ports on the **TOP** or **BOTTOM**. The value determines the position of the centre of the port and not the top/left.
 - **icon\_file** *str* - The icon file used to represent the port. HASE first looks for this file (icon_file.gif) in the project's image repository directory (declared in the PREAMBLE), then in HASE's own image repository, which has five entries:
-
 
 portdot: ![port dot](images/portdot.gif) &nbsp; portu: ![port up](images/portu.gif) &nbsp; portd: ![port down](images/portd.gif) &nbsp; portl: ![port left](images/portl.gif) &nbsp; portr: ![port righte](images/portr.gif)
 
