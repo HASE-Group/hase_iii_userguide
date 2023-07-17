@@ -131,8 +131,39 @@ If no icon file is specified, the default is *portdot*. In addition, specifying 
 
 ### Example
 
-
 <tt>REGISTERS : port input side BOTTOM position 45 ICON portu</tt>
+
+[<- top](<#top>)
+
+<a name="elf-param"></a>
+## Entity Layout: PARAM
+
+### Synopsis
+
+The PARAM declaration provides a mechanism for displaying a parameter and specifying its position.
+
+### Syntax
+
+<tt>object\_id : PARAM param\_name MODE mode\_name POSITION (param\_x,param\_y)</tt>
+
+- **object_id** *str* - The name of the entity that is associated with the parameter.  This can be the type name of an entity defined in the entity library, in which case the parameter will be positioned on all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
+**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**
+The param information given to an instance overrides the param information of the library component.
+- **param\_name** *str* - The instance name of the parameter to be displayed.
+- **mode\_name** *str* - This specifies how the parameter is to be displayed.  This can be one of the following:
+ -  **VALUE**: displays the parameter's value; it is updated as it changes through the animation.
+ -  **NAME\_VALUE**: displays the parameter's name as well as its value.
+ -  **ENT\_ICON**: allows enumerated parameters to be used to change the icon of the entity depending upon the parameter's state.
+ -  **PORT\_ICON**: allows enumerated parameters to be used to change the icon of a port depending upon the parameter's state.
+- **Parameter position** - Where a parameter is drawn on the screen depends on its [modifier](<entity.html#modifier>) *i.e.* on whether or not it is *static*.
+**Non-static parameters** are drawn as follows:
+ - **param\_x** *int*, **param\_y** *int* specify the x and y coordinates of the position where the value of parameter is to be displayed. They are relative to the top left corner of the icon of the associated entity, *e.g.* a value of 0,0 will cause the parameter to be displayed at the top left hand corner of the entity.
+**Static parameters** are drawn as follows:
+ - **param\_x** *int*, **param\_y** *int* specify the x coordinate of the position to display both the name and the value of the parameter. They are relative to the top left corner of the screen.
+
+### Example
+
+<tt>Memory\_Hierarchy.secondary\_cache : PARAM cache\_size MODE VALUE POSITION (50,0)</tt>
 
 [<- top](<#top>)
 
