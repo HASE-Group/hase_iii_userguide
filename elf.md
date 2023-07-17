@@ -138,10 +138,10 @@ The param information given to an instance overrides the param information of th
   -  **ENT\_ICON**: allows enumerated parameters to be used to change the icon of the entity depending upon the parameter's state.
  -  **PORT\_ICON**: allows enumerated parameters to be used to change the icon of a port depending upon the parameter's state.
 - **Parameter position** - Where a parameter is drawn on the screen depends on its [modifier](<entity.html#modifier>) *i.e.* on whether or not it is *static*.
-**Non-static parameters** are drawn as follows:
-  - **param\_x** *int*, **param\_y** *int* specify the x and y coordinates of the position where the value of parameter is to be displayed. They are relative to the top left corner of the icon of the associated entity, *e.g.* a value of 0,0 will cause the parameter to be displayed at the top left hand corner of the entity.  
-**Static parameters** are drawn as follows:
-  - **param\_x** *int*, **param\_y** *int* specify the x coordinate of the position to display both the name and the value of the parameter. They are relative to the top left corner of the screen.
+  - **Non-static parameters** are drawn as follows:
+    - **param\_x** *int*, **param\_y** *int* specify the x and y coordinates of the position where the value of parameter is to be displayed. They are relative to the top left corner of the icon of the associated entity, *e.g.* a value of 0,0 will cause the parameter to be displayed at the top left hand corner of the entity.  
+  - **Static parameters** are drawn as follows:
+  -   **param\_x** *int*, **param\_y** *int* specify the x coordinate of the position to display both the name and the value of the parameter. They are relative to the top left corner of the screen.
 
 ### Example
 
