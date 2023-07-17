@@ -141,7 +141,7 @@ The param information given to an instance overrides the param information of th
   - **Non-static parameters** are drawn as follows:
     - **param\_x** *int*, **param\_y** *int* specify the x and y coordinates of the position where the value of parameter is to be displayed. They are relative to the top left corner of the icon of the associated entity, *e.g.* a value of 0,0 will cause the parameter to be displayed at the top left hand corner of the entity.  
   - **Static parameters** are drawn as follows:
-  -   **param\_x** *int*, **param\_y** *int* specify the x coordinate of the position to display both the name and the value of the parameter. They are relative to the top left corner of the screen.
+    - **param\_x** *int*, **param\_y** *int* specify the x coordinate of the position to display both the name and the value of the parameter. They are relative to the top left corner of the screen.
 
 ### Example
 
