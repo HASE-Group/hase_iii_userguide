@@ -149,4 +149,36 @@ The param information given to an instance overrides the param information of th
 
 [<- top](<#top>)
 
+<a name="corners"></a>
+## Entity Layout: LINKCORNER
+
+### Synopsis
+
+The LINKCORNER declaration provides a mechanism to enable links to be routed round corners instead of just being straight lines.
+
+### Syntax
+
+<tt>object\_id : LINKCORNER src\_entity src\_port dest\_entity dest\_port no\_of\_corners (cx1,cy1) ...</tt>
+
+- **object\_id** *str* - The name of the higher level entity that contains the link (if the entity is not part of another (*i.e.* compound entity), this name should be TOPLEVEL).  The name can be the type name of an entity defined in the entity library, in which case the link corners will be positioned on all of the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
+**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**.
+The linkcorner information given to an instance overrides the linkcorner information of the library component.
+- **src\_entity** *str* - The instance name of the entity where the link starts. This name should be the name of an entity that is a child of the entity specified by entity\_name.
+- **src\_port** *str* - The name of the port that the link starts from.  It should be one of src\_entity's ports.
+- **dest\_entity** *str* - The instance name of the entity where the link finishes. This name should be the name of an entity that is a child of the entity specified by entity\_name.
+- **dest\_port** *str* - The name of the port that the link finishes.  It should be one of dest\_entity's ports.
+- **no\_of\_corners** *int* - The number of corners to be included in the link.
+- **cxN** *int* - The x coordinate of the Nth corner of the link.  It is given relative to the source port. More corners are specified by including more pairs of coordinates. The number of pairs should correspond to the specified number of links.
+- **cyN** *int* - The y coordinate of the Nth corner of the link.  It is given relative to the source port. More corners are specified by including more pairs of coordinates. The number of pairs should correspond to the specified number of corners.
+
+### Examples
+
+<tt>
+Memory\_Hierarchy.secondary\_cache : LINKCORNER first\_cache OUT second\_cache IN 3 (10,0) (10,10) (50,10)</tt>
+
+<tt>TOPLEVEL : LINKCORNER ALU output2 BUS2 input2 2 (0,15) (90,15)
+</tt>
+
+[<- top](<#top>)
+
 [<- Userguide](<Userguide.md>)
