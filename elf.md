@@ -146,8 +146,8 @@ The PARAM declaration provides a mechanism for displaying a parameter and specif
 
 <tt>object\_id : PARAM param\_name MODE mode\_name POSITION (param\_x,param\_y)</tt>
 
-- **object_id** *str* - The name of the entity that is associated with the parameter.  This can be the type name of an entity defined in the entity library, in which case the parameter will be positioned on all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:
-**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**
+- **object_id** *str* - The name of the entity that is associated with the parameter.  This can be the type name of an entity defined in the entity library, in which case the parameter will be positioned on all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:  
+**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
 The param information given to an instance overrides the param information of the library component.
 - **param\_name** *str* - The instance name of the parameter to be displayed.
 - **mode\_name** *str* - This specifies how the parameter is to be displayed.  This can be one of the following:
