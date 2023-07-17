@@ -40,7 +40,6 @@ entity_position ::= object_id : POSITION point_2d [ infoX ] [ infoY ] [ layout_o
 
  -  **object_id**  *str* - The name of the entity to be positioned. This can be the type name of an entity defined in the entity library, in which case the same coordinates will be given to all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.',  *i.e.* the syntax for a complete hierarchical name is: **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name}**.  
 The position given to an instance overrides the position information of the library component.
-
  -  **x**  *int* - The x coordinate of the top left corner of the entity's icon. This coordinate is relative to the top left corner of the project view panel for top level entities. For child entities of a compound entity it is relative to the upper left corner of the parent entity's icon. 
 
 The x coordinate may also be a string. In that case the string has to be the name of one of the parameters specified for the related entity. Then the position of the icon will change when the value of the parameter is changed.
@@ -115,10 +114,8 @@ The port information given to an instance overrides the port information of the 
 - **entity\_side** *str* - The name of the side of the entityon which the port is to be positioned. This should be
 **TOP**, **BOTTOM**, **LEFT** or **RIGHT**.
 - **port\_position** *int* - The number of pixels along the specified side on which the port is to be positioned. The number of pixels is relative to the top of the entity's icon for ports on the **LEFT** or **RIGHT**, and relative to the left of the entity's icon for ports on the **TOP** or **BOTTOM**. The value determines the position of the centre of the port and not the top/left.
-- **icon\_file** *str* - The icon file used to represent the port. HASE first looks for this file (icon_file.gif) in the project's image repository directory (declared in the PREAMBLE), then in HASE's own image repository, which has five entries:
-
-portdot: ![port dot](images/portdot.gif) &nbsp; portu: ![port up](images/portu.gif) &nbsp; portd: ![port down](images/portd.gif) &nbsp; portl: ![port left](images/portl.gif) &nbsp; portr: ![port righte](images/portr.gif)
-
+- **icon\_file** *str* - The icon file used to represent the port. HASE first looks for this file (icon_file.gif) in the project's image repository directory (declared in the PREAMBLE), then in HASE's own image repository, which has five entries:  
+portdot: ![port dot](images/portdot.gif) &nbsp; portu: ![port up](images/portu.gif) &nbsp; portd: ![port down](images/portd.gif) &nbsp; portl: ![port left](images/portl.gif) &nbsp; portr: ![port righte](images/portr.gif)  
 If no icon file is specified, the default is *portdot*. In addition, specifying *portblank* means that no port icon is drawn.
 
 ### Example
