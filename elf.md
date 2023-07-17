@@ -38,10 +38,7 @@ entity_position ::= object_id : POSITION point_2d [ infoX ] [ infoY ] [ layout_o
   | object_id : POSITION point_3d [ infoX ] [ infoY ] [ layout_order ]
 ```
 
- -  **object_id**  *str* - The name of the entity to be positioned. This can be the type name of an entity defined in the entity library, in which case the same coordinates will be given to all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.',  *i.e.* the syntax for a complete hierarchical name is: 
-
-**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name}**. 
-
+ -  **object_id**  *str* - The name of the entity to be positioned. This can be the type name of an entity defined in the entity library, in which case the same coordinates will be given to all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.',  *i.e.* the syntax for a complete hierarchical name is: **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name}**.  
 The position given to an instance overrides the position information of the library component.
 
  -  **x**  *int* - The x coordinate of the top left corner of the entity's icon. This coordinate is relative to the top left corner of the project view panel for top level entities. For child entities of a compound entity it is relative to the upper left corner of the parent entity's icon. 
@@ -114,7 +111,6 @@ The PORT declaration provides a mechanism to position a port on any side of an e
 
 - **object_id** *str* - The name of the entity with which the port is associated.  This can be the type name of an entity defined in the entity library, in which case the port will be positioned on all the entities of that type. It can also be the instance name of an entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is: **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
 The port information given to an instance overrides the port information of the library component.
-
 - **port\_name** *str* - The name of the port to be positioned.
 - **entity\_side** *str* - The name of the side of the entityon which the port is to be positioned. This should be
 **TOP**, **BOTTOM**, **LEFT** or **RIGHT**.
@@ -142,8 +138,7 @@ The PARAM declaration provides a mechanism for displaying a parameter and specif
 
 <tt>object\_id : PARAM param\_name MODE mode\_name POSITION (param\_x,param\_y)</tt>
 
-- **object_id** *str* - The name of the entity that is associated with the parameter.  This can be the type name of an entity defined in the entity library, in which case the parameter will be positioned on all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:  
-**top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
+- **object_id** *str* - The name of the entity that is associated with the parameter.  This can be the type name of an entity defined in the entity library, in which case the parameter will be positioned on all the entities of that type. It can also be the instance name of the required entity. The instance name should be the complete hierarchical name.  When specifying a level name from the hierarchy, the instance name, not the type name, should be used. Each level in the hierarchy should be separated by a '.', *i.e.* the syntax for a complete hierarchical name is:  **top\_level\_instance\_name.next\_level\_name. ... .last\_level\_name**  
 The param information given to an instance overrides the param information of the library component.
 - **param\_name** *str* - The instance name of the parameter to be displayed.
 - **mode\_name** *str* - This specifies how the parameter is to be displayed.  This can be one of the following:
