@@ -11,10 +11,7 @@ A clock in HASE serve two purposes:
 
 The entities required to support these mechanisms:
 
-[Clock](<#clock>)  
-[Clocked](<#clocked>)  
-[Biclocked](<#biclocked>)  
-[Pll](<#pll>)
+[Clock](<#clock>) &nbsp; &nbsp; &nbsp; [Clocked](<#clocked>) &nbsp; &nbsp; &nbsp; [Biclocked](<#biclocked>) &nbsp; &nbsp; &nbsp; [Pll](<#pll>)
 
 are contained in the **sync** library.
 
