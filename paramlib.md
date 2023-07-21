@@ -49,42 +49,41 @@ STRUCT ( Data_Packet, [ RINT (Packet_No, 0) , RINT (Packet_Data, 0) ] )
 The **Instr** parameter is best explained by means of an example. The following example shows the full instruction set of a simple computer (described in more detail in <a href="s-comp.html">Example Project</a>), preceded by the necessary operand <tt>STRUCT</tt> definitions. Each instruction consists of a function and zero, one or more operands.
 ```
 -- operands for loading a register from memory using address + (index reg)  
-  STRUCT (t\_load, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5), RINT (address, 0)]);  
+   STRUCT (t\_load, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5), RINT (address, 0)]);  
 -- operands for storing a register to memory using address + (index reg)  
-  STRUCT (t\_store, [RSTRING (src\_reg, "-", 5), RSTRING (dest\_reg, "-", 5), RINT (address, 0)]);  
-```
+   STRUCT (t\_store, [RSTRING (src\_reg, "-", 5), RSTRING (dest\_reg, "-", 5), RINT (address, 0)]);  
 -- operands for loading a register from memory using address + (index reg)  
-&nbsp; &nbsp; STRUCT (t\_load, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5), RINT (address, 0)]);  
+   STRUCT (t\_load, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5), RINT (address, 0)]);  
 -- operands for storing a register to memory using address + (index reg)  
-&nbsp; &nbsp; 	STRUCT (t\_store, [RSTRING (src\_reg, "-", 5), RSTRING (dest\_reg, "-", 5), RINT (address, 0)]);  
+   STRUCT (t\_store, [RSTRING (src\_reg, "-", 5), RSTRING (dest\_reg, "-", 5), RINT (address, 0)]);  
 -- operand for loading register with immediate  
-&nbsp; &nbsp; 	STRUCT (t\_loadi, [RSTRING (dest\_reg, "-", 5), RINT (immediate, 0)]);  
+   STRUCT (t\_loadi, [RSTRING (dest\_reg, "-", 5), RINT (immediate, 0)]);  
 -- operands for move instruction  
-&nbsp; &nbsp; 	STRUCT (t\_move, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5)]);  
+   STRUCT (t\_move, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5)]);  
 -- operands for ALU scalar instruction group  
-&nbsp; &nbsp; 	STRUCT (t\_alu,  [RSTRING (dest\_reg, "-", 5),  
-&nbsp; &nbsp; &nbsp; &nbsp; RSTRING (src\_reg1, "-", 5),  
-&nbsp; &nbsp; &nbsp; &nbsp; RSTRING (src\_reg2, "-", 5)]);  
---  operands for ALUI scalar instruction group  
-&nbsp; &nbsp; 	STRUCT (t\_alui,  [RSTRING (dest\_reg, "-", 5),
-&nbsp; &nbsp; &nbsp; &nbsp; RSTRING (src\_reg1, "-", 5),
-&nbsp; &nbsp; &nbsp; &nbsp; RINT (immediate, 0)]);  
+   STRUCT (t\_alu,  [RSTRING (dest\_reg, "-", 5),  
+                     RSTRING (src\_reg1, "-", 5),  
+                     RSTRING (src\_reg2, "-", 5)]);  
+-- operands for ALUI scalar instruction group  
+   STRUCT (t\_alui,  [RSTRING (dest\_reg, "-", 5),
+                      RSTRING (src\_reg1, "-", 5),
+                      RINT (immediate, 0)]);  
 -- operands for COMP instruction  
-&nbsp; &nbsp; 	STRUCT (t\_comp, [RSTRING (src\_reg1, "-", 5), RSTRING (src\_reg2, "-", 5)]);  
+  STRUCT (t\_comp, [RSTRING (src\_reg1, "-", 5),
+                    RSTRING (src\_reg2, "-", 5)]);  
 -- Definition of a simple instruction set  
-&nbsp; &nbsp; 	INSTR (t\_simple\_instrn\_set, [(NOP),  
-&nbsp; &nbsp; &nbsp; &nbsp; (JUMP, RINT (immediate, 0)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (JREG, RSTRING (src\_reg,  "-")),  
-&nbsp; &nbsp; &nbsp; &nbsp; (SETCC(SEQ,SNE,SGT,SLT,SGE,SLE), RSTRUCT (t\_comp, comp\_field)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (BRANCH, RSTRING (label, "-", 50)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (LDM, RSTRUCT (t\_load,  load\_field)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (LDI, RSTRUCT (t\_loadi, loadi\_field)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (STM, RSTRUCT (t\_store, store\_field)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (ALU(ADD,SUB,MUL,DIV,AND,OR,XOR,SLL,SRL,SRA), RSTRUCT (t\_alu, alu\_field)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (ALUI(ADDI,SUBI,MULI,DIVI,ANDI,ORI,XORI,SLLI,SRLI,SRAI),  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RSTRUCT (t\_alui,  alui\_field)),  
-&nbsp; &nbsp; &nbsp; &nbsp; (STOP) ], function);  
-</tt>
+   INSTR (t\_simple\_instrn\_set, [(NOP),  
+         (JUMP, RINT (immediate, 0)),  
+         (JREG, RSTRING (src\_reg,  "-")),  
+         (SETCC(SEQ,SNE,SGT,SLT,SGE,SLE), RSTRUCT (t\_comp, comp\_field)),  
+         (BRANCH, RSTRING (label, "-", 50)),  
+         (LDM, RSTRUCT (t\_load,  load\_field)),  
+         (LDI, RSTRUCT (t\_loadi, loadi\_field)),  
+         (STM, RSTRUCT (t\_store, store\_field)),  
+         (ALU(ADD,SUB,MUL,DIV,AND,OR,XOR,SLL,SRL,SRA), RSTRUCT (t\_alu, alu\_field)),  
+         (ALUI(ADDI,SUBI,MULI,DIVI,ANDI,ORI,XORI,SLLI,SRLI,SRAI), RSTRUCT (t\_alui,  alui\_field)),  
+         (STOP) ], function);  
+```
 
 **Notes**
 
