@@ -47,7 +47,12 @@ STRUCT ( Data_Packet, [ RINT (Packet_No, 0) , RINT (Packet_Data, 0) ] )
 <font size="+2"> **Instr** - Instruction Parameter</font>  
 
 The **Instr** parameter is best explained by means of an example. The following example shows the full instruction set of a simple computer (described in more detail in <a href="s-comp.html">Example Project</a>), preceded by the necessary operand <tt>STRUCT</tt> definitions. Each instruction consists of a function and zero, one or more operands.
-
+```
+-- operands for loading a register from memory using address + (index reg)  
+  STRUCT (t\_load, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5), RINT (address, 0)]);  
+-- operands for storing a register to memory using address + (index reg)  
+  STRUCT (t\_store, [RSTRING (src\_reg, "-", 5), RSTRING (dest\_reg, "-", 5), RINT (address, 0)]);  
+```
 -- operands for loading a register from memory using address + (index reg)  
 &nbsp; &nbsp; STRUCT (t\_load, [RSTRING (dest\_reg, "-", 5), RSTRING (src\_reg, "-", 5), RINT (address, 0)]);  
 -- operands for storing a register to memory using address + (index reg)  
