@@ -4,7 +4,7 @@ The stages in creating and running a project are as follows:
 
 -  Create .edl and .elf files that make up the project description and entity icons. This allows the design to be visualised on-screen as a static image. Errors in these files will be reported in the Output panel; some errors in the .elf file will be apparent from the image.
 
--  Write Hase++ behavioural code for each entity (*entity.hase* files) and, if appropriate, global\_fns.h and global\_fns.cpp file. global\_fns.cpp must have #include "XXXX.h" in line 1 where XXXX is the name of the project in the .edl file.
+-  Write Hase++ behavioural code for each entity (*entity.hase* files) and, if appropriate, global\_fns.h and global\_fns.cpp file. global\_fns.cpp must have #include "XXXX.h" in line 1 where XXXX is the name of the project in the .edl file. [Hase++](<hasepp.md>) is a discrete event simulation engine with a programming interface similar to that of Jade's Sim++, but implemented using C++ and threads. It includes a set of library routines to provide for process oriented discrete event simulation and a run time system for multi-threading many entities in parallel and keeping track of simulation time.
 
 -  Go to the Project Menu and use Build Project to compile the project.  The first thing HASE does is create C++ (.cpp) files from the .hase files. It then compiles the .cpp files, in the order in which entities appear in the .edl file, to create the .o files. If the compilation fails for one file, those following will not be compiled, so there won't be a .o file.  When there are compilation errors, examine the relevant *entity.cpp* file to find where the errors are, correct them in the *entity.hase* file and re-compile.
 
