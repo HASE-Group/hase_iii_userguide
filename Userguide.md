@@ -13,7 +13,6 @@ USERGUIDE - CONTENTS
 [Screen Layout](<elf.md>)  
 [The sync Library](<synclib.md>)  
 [Project Design Cycle](<cycle.md>)  
-[Coding Entity Behaviour](<coding.md>)  
 [Hase++](<hasepp.md>)  
 [Entity Code Structure](<code.md>)  
 [Global Functions](<global_fns.md>)  
