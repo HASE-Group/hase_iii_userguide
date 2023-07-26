@@ -20,9 +20,9 @@ $class_includes
 
 $class_decls
   // Declarations:
-  // entity references
-  // structures and variables
-  // classes
+   // entity references
+   // structures and variables
+   // classes
 
 $class_defs                                                                                                                                                                                               
  // definitions of classes defined in $class_decls
