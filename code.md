@@ -35,7 +35,7 @@ $phase0
 
   sim_from_port packet_name(port_name);   // predicate for use in sim_waiting test
 
-  if (sim_waiting(ev, packet_name) &gt; 0) 
+  if (sim_waiting(ev, packet_name) > 0) 
    {
     SIM_CAST(packet_type, InputPacket, ev);
       // Unit actions
