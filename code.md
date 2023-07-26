@@ -7,8 +7,44 @@ section (\$class\_decls) containing declarations of entity references, structure
 
 The \$pre section contains code to be executed before the simulation proper starts, *e.g.* initialisation of variables (all variables, classes, *etc* must be declared in the declarations section at the start of the file [see note 1 below]) and the setting of pointers to other entities.
 
-![entity code](images/code.gif)
+```
+// Project:     project_name
+// Entity       entity_name
+// File         file_name.hase
+// Date:        creation_date
 
+// Description of entity behaviour
+
+$class_includes
+// specifies any header files required by the entity
+
+$class_decls
+  // Declarations:
+  // entity references
+  // structures and variables
+  // classes
+
+$class_defs                                                                                                                                                                                               
+ // definitions of classes defined in $class_decls
+
+$pre
+ // code to be executed before an entity starts executing:
+ // initialise variables, set pointers, etc.
+
+$phase0
+
+  sim_from_port packet_name(port_name);   // predicate for use in sim_waiting test
+
+  if (sim_waiting(ev, packet_name) &gt; 0) 
+   {
+    SIM_CAST(packet_type, InputPacket, ev);
+      // Unit actions
+   }
+$phase1                                                                                                                                                                                                   
+ send_PACKET() // Send Output to next unit
+$report
+ // code to be executed after the entity has completed
+``` 
 Since this is a two-phase clocked system, the definition of each clocked entity will include the following:
 
 <tt>EXTENDS (Biclocked)</tt>
