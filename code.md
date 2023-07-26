@@ -72,3 +72,5 @@ $phase0
 Note the "/ 2", which is required because this is a two-phase clock.
 <hr>
 [1] Hase++, as a superset of C++ allows declaration within the body section, unlike Java: in an earlier phase of the HASE project a translator was used to convert HASE models into JavaHASE and the translator needed the Hase++ code to be Java compatible. Although this constraint no longer applies, it is considered good practice in HASE to stick with this rule.
+
+[<- Userguide](<Userguide.md>)
