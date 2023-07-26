@@ -1,6 +1,6 @@
 ## Stopping a Simulation
 
-The statement:    *stopSimulation(0); *
+The statement:    <tt>stopSimulation(0);</tt>
 
 included in a .hase file will cause the simulation to stop normally. In a multiprocessor simulation, for example, this mightbe included in code such as:
 
