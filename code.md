@@ -61,8 +61,10 @@ It is sometimes useful, particularly when debugging code, to execute a print sta
 $class_decls
  int cycle;
  Clock* MyClock;
+
 $pre
  MyClock = (Clock*) sim.get_entity( sim.get_entity_id( "CLOCK" ) );
+
 $phase0
  cycle = MyClock->cycle / 2;
  printf("Starting clock cycle %d\n", cycle);
