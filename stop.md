@@ -2,7 +2,7 @@
 
 The statement:    <tt>stopSimulation(0);</tt>
 
-included in a .hase file will cause the simulation to stop normally. In a multiprocessor simulation, for example, this mightbe included in code such as:
+included in a .hase file will cause the simulation to stop normally. In a multiprocessor simulation, for example, this might be included in code such as:
 
 ```
   if (nodes_done==4)
