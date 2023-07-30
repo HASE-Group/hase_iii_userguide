@@ -1,7 +1,6 @@
 USERGUIDE - CONTENTS  
 
 [Introduction](<intro.md>)  
-[HASE History](<history.md>)  
 [The User Interface](<iface.md>)  
 [System Overview](<oview.md>)  
 [Defining a Project](<project.md>)  
