@@ -33,7 +33,7 @@ When  a reference parameter is declared in the PARAMS section of an [entity](<en
 <hr>
 
 <a name="rbool"></a>
-<font size="+2">**rBool** - Reference Boolean Parameter</font> - RBOOL ( instance\_name, *initial\_value*)  
+[^ ](<#list>)<font size="+2">**rBool** - Reference Boolean Parameter</font> - RBOOL ( instance\_name, *initial\_value*)  
  
 The RBOOL declaration allows the user to create boolean parameters. Note that there is no corresponding BOOL definition in the parameter library because 'bool' is a standard type and is known to HASE. For this reason no type name is supplied to the RBOOL constructor.
 
