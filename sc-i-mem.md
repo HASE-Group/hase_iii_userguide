@@ -7,3 +7,5 @@ SLT R1 R2
 BRANCH loop
 STOP
 ```
+
+[<- Example Project](s-comp.md)
