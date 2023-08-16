@@ -22,4 +22,5 @@ MEMORY : port data_request side BOTTOM position 30 ICON portu
 MEMORY : port instr_out side BOTTOM position 110
 MEMORY : port data_out side BOTTOM position 110
 ```
+[<- Example Project](s-comp.md)
 
