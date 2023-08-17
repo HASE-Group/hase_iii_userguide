@@ -104,4 +104,4 @@ Entities generated in this example are named:<p>
 
 The first number is the coordinate in the first dimension, the second is the the coordinate is the second dimension (*etc.* for more dimensions).
 
-[<- Entity Library](entitylib.md)
+[<- Defining a Project](project.md)
