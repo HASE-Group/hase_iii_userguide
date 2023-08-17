@@ -5,7 +5,7 @@ The Simple Computer project consists of a Processor and a Memory.  The Memory co
 Along with the Condition Code register, the Program Counter (PC) and Instruction Register (IR) are displayed in the Project View panel. The Program Counter has two fields, a label (<tt>main</tt> in the
 figure) and an offset (<tt>0</tt> in the figure), because the instruction array in the Memory is declared using the [ARRAYI](<paramlib.md#arrayi">) construct. 
 
-The project is made up of the files listed below. These files illustrate many of the features of HASE described in the User Guide.
+The project is made up of the files listed below. These files illustrate many of the features of HASE described in the User Guide. The full set of files can be found at <https://github.com/HASE-Group/s-comp>
 
 Definition files (HASE-III)
 .md
