@@ -71,5 +71,5 @@ COMPENTITY Computer (
 )
 ```
 
-[<- Entity Library](<entitylib.md>)
+[<- Defining a Project](<project.md>)
 
