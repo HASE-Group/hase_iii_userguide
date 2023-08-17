@@ -20,7 +20,7 @@ Entity Behaviour files
 Global Function files
 
 - [global_fns.h](sc-global-h.md)
-- [global_fns.c](sc-global-cpp.md)
+- [global_fns.cpp](sc-global-c.md)
 
 Register/Memory content files
 
