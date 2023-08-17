@@ -146,4 +146,4 @@ sim_schedule( clk, 0.0, CLOCK, SIM_PUT(int, DONE));
 }
 ```
 
-[<- Entity Library](<entitylib.md>)
+[<- Defining a Project](<project.md>)
