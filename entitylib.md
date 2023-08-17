@@ -13,6 +13,6 @@ The **ENTITYLIB** section of the EDL description enables the user to create a li
 - **mesh\_definition** - This definition is a macro allowing the creation of a list ([Mesh1D](<mesh1.md>)), an array (Mesh2D), a cuboid (Mesh3D), etc, of entities in an 
 [n-dimensional mesh](<meshn.md>).
 
-- **abstract\_definition** - This is a definition of an [abstract entity](abstract.md>), the behaviour of which is to be inherited from other basic entities. This construct increases the reusability of entities.
+- **abstract\_definition** - This is a definition of an [abstract entity](<abstract.md>), the behaviour of which is to be inherited from other basic entities. This construct increases the reusability of entities.
 
 [<- Defining a Project](<project.md>)
