@@ -1,6 +1,53 @@
 ## Hase++
 
- Hase++ appears to the programmer as a superset of C++ containing simulation methods that allow entities to change state, to update  parameter values, to send and receive packets, *etc*. These changes can subsequently be visualised.
+Hase++ appears to the programmer as a superset of C++ containing simulation methods that allow entities to change state, to update parameter values, to send and receive packets, and other emulation tasks. Each Hase Entity has a single Hase++ file associated with it. The HASE++ file is divided into several ‘$named_section’s. Each named section is known as a Service. By default, all entity provide the following Services:
+
+### Standard Services
+
+#### $extra_classes_defs
+Used to forward define any types or global variables needed that where not declared in the EDL. Anything declared in this section will be visible to $startup, $report, and $body sections in the generated c++ file.
+
+#### $startup
+This section is called in all entities before simulation starts. All entities will complete execution of this section before the first-time step of the simulation is launched.
+
+#### $report
+After simulation has finished this section is called. It can be utilised to capture statistics or dump entity states to assist in debugging, or evaluation of the simulation activities.
+
+#### $class_decls
+Used to forward declare any types or global variables in the .h file generated for this entity.
+
+#### $class_defs
+Used to forward define any types or global variables needed that where not declared in the EDL. Anything declared in this section will be visible to $body sections only.
+
+#### $class_includes
+Used to add extra include files into generated .h file for entity.
+
+#### $body
+Code is this section is repeated called during the execution of the simulation.
+
+Entities may also extend various abstract entity to provide additional services. 
+
+### Clocked/Pclocked
+
+#### $pre
+Section called after $started, but before the first $tick.
+
+#### $tick
+Instead of using $body, $tick should be used in a similar way. Instead of being repeated called in a busy loop, it will be called once for each time step of the clock.
+
+### Biclocked/BiclockedD/Pbiclocked
+
+#### $pre
+Section called after $started, but before the first $phase0/$phase1.
+
+#### $phase0
+Instead of using $body, $phase0 and $phase1 should be used in a similar way. Instead of being repeated called in a busy loop, each phase will get called once for each time step of the clock. The two phases represent clocking logic on the rising and falling edges of a clock.
+
+#### $phase1
+See $phase0.
+
+### $body, $tick, and $phase0/$phase1
+Most of the code written in HASE++ will be in the $body, or in clocked entities the $tick, or $phase0/$phase1 Service sections. Activity in these sections should emulate the functional behaviour of the entity being simulated. Typical activities will include Changing States, Updating Parameters, Send Messages to other entities, and Receive Messages from other entities. Results of these activities will cause trace file data to be written which can then be used to generate a visualisation of the execution.
 
 ### Visualisation
 
