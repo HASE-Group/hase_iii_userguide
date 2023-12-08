@@ -1,53 +1,53 @@
 ## Hase++
 
-Hase++ appears to the programmer as a superset of C++ containing simulation methods that allow entities to change state, to update parameter values, to send and receive packets, and other emulation tasks. Each Hase Entity has a single Hase++ file associated with it. The HASE++ file is divided into several ‘$named_section’s. Each named section is known as a Service. By default, all entity provide the following Services:
+Hase++ appears to the programmer as a superset of C++ containing simulation methods that allow entities to change state, to update parameter values, to send and receive packets, and to execute other emulation tasks. Each HASE Entity has a single Hase++ file associated with it. The HASE++ file is divided into several ‘$named_section’s. Each named section is known as a Service. The choices to be made regarding the use of some of these services depend on whether or not the entity is extended to use one of HASE's built-in clocking mechanisms. By default, all entities provide the following Services:
 
 ### Standard Services
 
 #### $extra_classes_defs
-Used to forward define any types or global variables needed that where not declared in the EDL. Anything declared in this section will be visible to $startup, $report, and $body sections in the generated c++ file.
+Used to forward define any types or global variables needed that were not declared in the EDL. Anything declared in this section will be visible to the $startup, $report, and $body sections in the generated c++ file.
 
 #### $startup
 This section is called in all entities before simulation starts. All entities will complete execution of this section before the first-time step of the simulation is launched.
 
 #### $report
-After simulation has finished this section is called. It can be utilised to capture statistics or dump entity states to assist in debugging, or evaluation of the simulation activities.
+After simulation has finished, this section is called. It can be utilised to capture statistics or dump entity states to assist in debugging, or evaluation of the simulation activities.
 
 #### $class_decls
 Used to forward declare any types or global variables in the .h file generated for this entity.
 
 #### $class_defs
-Used to forward define any types or global variables needed that where not declared in the EDL. Anything declared in this section will be visible to $body sections only.
+Used to forward define any types or global variables needed that were not declared in the EDL. Anything declared in this section will be visible to $body sections only.
 
 #### $class_includes
-Used to add extra include files into generated .h file for entity.
+Used to add extra files to be included into the generated .h file for entity.
 
 #### $body
-Code is this section is repeated called during the execution of the simulation.
+Appropriate for entities that are not clocked. Code is this section is repeatedly called during the execution of the simulation.
 
 Entities may also extend various abstract entity to provide additional services. 
 
-### Clocked/Pclocked
+### Clocked/Pclocked extension
 
 #### $pre
-Section called after $started, but before the first $tick.
+This section is called after $startup, but before the first $tick.
 
 #### $tick
-Instead of using $body, $tick should be used in a similar way. Instead of being repeated called in a busy loop, it will be called once for each time step of the clock.
+In entities that use the Clocked or Pclocked extenion, $tick should be used instead of $body. Instead of being repeatedly called in a busy loop, the code in this section is called once for each tick (time step) of the clock.
 
-### Biclocked/BiclockedD/Pbiclocked
+### Biclocked/BiclockedD/Pbiclocked extension
 
 #### $pre
-Section called after $started, but before the first $phase0/$phase1.
+Section called after $startup, but before the first $phase0/$phase1.
 
 #### $phase0
-Instead of using $body, $phase0 and $phase1 should be used in a similar way. Instead of being repeated called in a busy loop, each phase will get called once for each time step of the clock. The two phases represent clocking logic on the rising and falling edges of a clock.
+In entities that use the Biclocked, BiclockedD or Pbiclocked extensions, $phase0 and $phase1 should be used instead of $body. Instead of being repeatedl called in a busy loop, each phase is called once for each time step of the clock. The two phases represent clocking logic on the rising and falling edges of a clock.
 
 #### $phase1
 See $phase0.
 
 ### $body, $tick, and $phase0/$phase1
-Most of the code written in HASE++ will be in the $body, or in clocked entities the $tick, or $phase0/$phase1 Service sections. Activity in these sections should emulate the functional behaviour of the entity being simulated. Typical activities will include Changing States, Updating Parameters, Send Messages to other entities, and Receive Messages from other entities. Results of these activities will cause trace file data to be written which can then be used to generate a visualisation of the execution.
+Most of the code written in Hase++ will be in the $body, or in clocked entities, in the $tick or $phase0/$phase1 Service sections. Activity in these sections should emulate the functional behaviour of the entity being simulated. Typical activities will include Changing States, Updating Parameters, Sending Messages to other entities, and Receiving Messages from other entities. Results of these activities will cause trace file data to be written. This can subsequently be used to generate a visualisation of the execution.
 
 ### Visualisation
 
@@ -133,7 +133,7 @@ which defines a link of type <b>l\_pipe,</b> along which link packets of type <b
 
 ### Receiving Packets
 
-HASE places packets sent by entities in an event queue. Receiving entities use a a number of methods to dequeue these events and to extract the relevant information from the packets.
+HASE places packets sent by entities in an event queue. Receiving entities use a number of methods to dequeue these events and to extract the relevant information from the packets.
 
 #### Predicates
 
