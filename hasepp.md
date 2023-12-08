@@ -41,7 +41,7 @@ In entities that use the Clocked or Pclocked extenion, $tick should be used inst
 Section called after $startup, but before the first $phase0/$phase1.
 
 #### $phase0
-In entities that use the Biclocked, BiclockedD or Pbiclocked extensions, $phase0 and $phase1 should be used instead of $body. Instead of being repeatedl called in a busy loop, each phase is called once for each time step of the clock. The two phases represent clocking logic on the rising and falling edges of a clock.
+In entities that use the Biclocked, BiclockedD or Pbiclocked extensions, $phase0 and $phase1 should be used instead of $body. Instead of being repeatedly called in a busy loop, each phase is called once for each time step of the clock. The two phases represent clocking logic on the rising and falling edges of a clock.
 
 #### $phase1
 See $phase0.
