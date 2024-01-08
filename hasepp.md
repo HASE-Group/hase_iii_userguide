@@ -26,7 +26,7 @@ void Free();
 Note that new member variables should be initilsed in the start of the $startup Service (or $pre Service, if the entity is extending one of HASE's Clocked or BiClocked entities).
 
 #### $class_defs
-Used to definition any functions or static member variables that where declared in the $class_decls section.
+Used to define any functions or static member variables that where declared in the $class_decls section.
 
 ~~~~~~~~~~~~~~~~~
 $class_defs
