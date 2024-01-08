@@ -5,7 +5,7 @@ Hase++ appears to the programmer as a superset of C++ containing simulation meth
 ### Standard Services
 
 #### $extra_classes_defs
-Used to forward define any types or global variables needed that were not declared in the EDL. Anything declared in this section will be visible to the $startup, $report, and $body sections in the generated c++ file.
+Used to forward define any types or global variables needed that were not declared in the EDL. Anything declared in this section will be visible to the $startup, $report, and $body sections in the generated c++ file for the given entity.
 
 #### $startup
 This section is called in all entities before simulation starts. All entities will complete execution of this section before the first-time step of the simulation is launched.
@@ -14,13 +14,31 @@ This section is called in all entities before simulation starts. All entities wi
 After simulation has finished, this section is called. It can be utilised to capture statistics or dump entity states to assist in debugging, or evaluation of the simulation activities.
 
 #### $class_decls
-Used to forward declare any types or global variables in the .h file generated for this entity.
+Used to add declaration to the entity's class declaration. This can be used to add new member variables, functions, or local type definitions to the entity's generatred class. Any added new member function will need to have their definition declared in the class_defs Service.
+
+~~~~~~~~~~~~~~~~~
+$class_decls
+
+unsigned int m_uCounter;
+void Free();
+~~~~~~~~~~~~~~~~~
+
+Note that new member variables should be initilsed in the start of the $startup Service (or $pre Service, if the entity is extending one of HASE's Clocked or BiClocked entities).
 
 #### $class_defs
-Used to forward define any types or global variables needed that were not declared in the EDL. Anything declared in this section will be visible to $body sections only.
+Used to definition any functions or static member variables that where declared in the $class_decls section.
+
+~~~~~~~~~~~~~~~~~
+$class_defs
+
+void EntityName::Free()
+{
+	m_uCounter--;
+}
+~~~~~~~~~~~~~~~~~
 
 #### $class_includes
-Used to add extra files to be included into the generated .h file for entity.
+Used to declare other classes or types that will be used by the entity's class declaration.
 
 #### $body
 Appropriate for entities that are not clocked. Code is this section is repeatedly called during the execution of the simulation.
