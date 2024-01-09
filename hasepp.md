@@ -14,7 +14,7 @@ This section is called in all entities before simulation starts. All entities wi
 After simulation has finished, this section is called. It can be utilised to capture statistics or dump entity states to assist in debugging, or evaluation of the simulation activities.
 
 #### $class_decls
-Used to add declaration to the entity's class declaration. This can be used to add new member variables, functions, or local type definitions to the entity's generatred class. Any added new member function will need to have their definition declared in the class_defs Service.
+Used to add declarations to the entity's class declaration. This can be used to add new member variables, functions, or local type definitions to the entity's generatred class. Any added new member function will need to have its definition declared in the class_defs Service.
 
 ~~~~~~~~~~~~~~~~~
 $class_decls
@@ -26,7 +26,7 @@ void Free();
 Note that new member variables should be initilsed in the start of the $startup Service (or $pre Service, if the entity is extending one of HASE's Clocked or BiClocked entities).
 
 #### $class_defs
-Used to define any functions or static member variables that where declared in the $class_decls section.
+Used to define any functions or static member variables that were declared in the $class_decls section.
 
 ~~~~~~~~~~~~~~~~~
 $class_defs
